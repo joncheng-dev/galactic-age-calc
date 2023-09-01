@@ -34,4 +34,6 @@ export default class GalacticAge {
     let jupiterToEarthYearRatio = eDaysInAYearJupiter / eDaysInAYearEarth;
     this.jupiterYears = Number(parseFloat(this.earthYears * jupiterToEarthYearRatio).toFixed(2));
   }
+
+  yearsPassedInMercuryYears() {}
 }

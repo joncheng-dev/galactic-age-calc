@@ -42,4 +42,12 @@ describe("GalacticAge", () => {
     newInstance.calcJupiterYears();
     expect(newInstance.jupiterYears).toEqual(11.87);
   });
+
+  // method yearsPassedInMercuryYears
+  test("should take in two parameters -- a user's current age, and how many years passed since a past birthday, and returns the number of Mercury years that have passed", () => {
+    let usersEarthAge = 13;
+    const newInstance = new GalacticAge(usersEarthAge);
+    let conversion = newInstance.yearsPassedInMercuryYears();
+    expect(conversion).toEqual(54.16);
+  });
 });

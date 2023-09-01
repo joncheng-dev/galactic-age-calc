@@ -49,6 +49,6 @@ describe("GalacticAge", () => {
     const newInstance = new GalacticAge(usersEarthAge);
     let ageThen = 43;
     let conversion = newInstance.yearsPassedInMercuryYears(ageThen);
-    expect(conversion).toEqual(54.16);
+    expect(conversion).toEqual(53.92);
   });
 });

@@ -1,3 +1,5 @@
+import { earthYearsDifference } from "./utilityFxns";
+
 export default class GalacticAge {
   constructor(eYears) {
     this.mercuryYears = null;
@@ -35,5 +37,11 @@ export default class GalacticAge {
     this.jupiterYears = Number(parseFloat(this.earthYears * jupiterToEarthYearRatio).toFixed(2));
   }
 
-  yearsPassedInMercuryYears() {}
+  yearsPassedInMercuryYears(ageInAPastDate) {
+    let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
+    let eDaysInAYearMercury = 88;
+    let eDaysInAYearEarth = 365;
+    let mercuryToEarthYearRatio = eDaysInAYearMercury / eDaysInAYearEarth;
+    return Number(parseFloat(ageDifference / mercuryToEarthYearRatio).toFixed(2));
+  }
 }

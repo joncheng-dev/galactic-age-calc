@@ -53,5 +53,11 @@ export default class GalacticAge {
     return Number(parseFloat(ageDifference / venusToEarthYearRatio).toFixed(2));
   }
 
-  yearsPassedInMarsYears() {}
+  yearsPassedInMarsYears(ageInAPastDate) {
+    let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
+    let eDaysInAYearMars = 687;
+    let eDaysInAYearEarth = 365;
+    let marsToEarthYearRatio = eDaysInAYearMars / eDaysInAYearEarth;
+    return Number(parseFloat(ageDifference / marsToEarthYearRatio).toFixed(2));
+  }
 }

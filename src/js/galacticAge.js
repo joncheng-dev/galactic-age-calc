@@ -61,5 +61,11 @@ export default class GalacticAge {
     return Number(parseFloat(ageDifference / marsToEarthYearRatio).toFixed(2));
   }
 
-  yearsPassedInJupiterYears() {}
+  yearsPassedInJupiterYears(ageInAPastDate) {
+    let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
+    let eDaysInAYearJupiter = 4333;
+    let eDaysInAYearEarth = 365;
+    let jupiterToEarthYearRatio = eDaysInAYearJupiter / eDaysInAYearEarth;
+    return Number(parseFloat(ageDifference / jupiterToEarthYearRatio).toFixed(2));
+  }
 }

@@ -9,7 +9,32 @@ export default class GalacticAge {
     this.jupiterYears = null;
   }
 
-  calcEarthYearsToPlanetYrs() {}
+  calcEarthYearsToPlanetYrs(targetPlanet) {
+    let eDaysInAYearMercury = 88;
+    let eDaysInAYearEarth = 365;
+    let eDaysInAYearVenus = 225;
+    let eDaysInAYearMars = 687;
+    let eDaysInAYearJupiter = 4333;
+
+    let eDaysInTargetPlanetsYear;
+    switch (targetPlanet) {
+      case "mercury":
+        eDaysInTargetPlanetsYear = eDaysInAYearMercury;
+        this.mercuryYears = Number(parseFloat((eDaysInTargetPlanetsYear / eDaysInAYearEarth) * this.earthYears).toFixed(2));
+        break;
+      case "venus":
+        eDaysInTargetPlanetsYear = eDaysInAYearVenus;
+        break;
+      case "mars":
+        eDaysInTargetPlanetsYear = eDaysInAYearMars;
+        break;
+      case "jupiter":
+        eDaysInTargetPlanetsYear = eDaysInAYearJupiter;
+        break;
+      default:
+        break;
+    }
+  }
 
   calcVenusYears() {
     let eDaysInAYearVenus = 225;

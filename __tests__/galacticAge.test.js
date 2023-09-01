@@ -82,7 +82,7 @@ describe("GalacticAge Methods to Calculate Years Passed on Different Planets Rel
   });
   test("should take in two parameters -- 'target planet' (in this case, Mercury), and an invalid number for 'how many years passed since a past birthday' and be undefined.", () => {
     ageThen = -3;
-    let conversion = newInstance.yearsPassedInTargetPlanetYears(0, ageThen);
+    let conversion = newInstance.yearsPassedInTargetPlanetYears("Mercury", ageThen);
     expect(conversion).toBeUndefined();
   });
 });

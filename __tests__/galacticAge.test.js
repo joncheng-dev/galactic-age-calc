@@ -1,6 +1,6 @@
 import GalacticAge from "../src/js/galacticAge.js";
 
-describe("GalacticAge", () => {
+describe("GalacticAge constructor", () => {
   test("should correctly generate an instance of GalacticAge class, taking a parameter of Earth years, setting its value to property 'this.earthYears', and all other properties' values set to 'null'", () => {
     let usersEarthAge = 50;
     const newInstance = new GalacticAge(usersEarthAge);
@@ -12,7 +12,7 @@ describe("GalacticAge", () => {
   });
 });
 
-describe("Methods to Calculate Different Planets' Years Relative to Earth", () => {
+describe("GalacticAge Methods to Calculate Different Planets' Years Relative to Earth", () => {
   let usersEarthAge;
   let newInstance;
 
@@ -43,7 +43,7 @@ describe("Methods to Calculate Different Planets' Years Relative to Earth", () =
   });
 });
 
-describe("Methods to Calculate Years Passed on Different Planets Relative to Earth Years", () => {
+describe("GalacticAge Methods to Calculate Years Passed on Different Planets Relative to Earth Years", () => {
   let usersEarthAge;
   let newInstance;
   let ageThen;
@@ -64,5 +64,11 @@ describe("Methods to Calculate Years Passed on Different Planets Relative to Ear
   test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Venus years that have passed", () => {
     let conversion = newInstance.yearsPassedInVenusYears(ageThen);
     expect(conversion).toEqual(21.09);
+  });
+
+  // method yearsPassedInMarsYears
+  test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Mars years that have passed", () => {
+    let conversion = newInstance.yearsPassedInMarsYears(ageThen);
+    expect(conversion).toEqual(6.91);
   });
 });

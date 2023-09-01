@@ -32,6 +32,7 @@ export default class GalacticAge {
         break;
       case "jupiter":
         eDaysInTargetPlanetsYear = eDaysInAYearJupiter;
+        this.jupiterYears = Number(parseFloat((eDaysInTargetPlanetsYear / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
       default:
         break;

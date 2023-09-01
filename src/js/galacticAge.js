@@ -27,4 +27,6 @@ export default class GalacticAge {
     let marsToEarthYearRatio = eDaysInAYearMars / eDaysInAYearEarth;
     this.marsYears = Number(parseFloat(this.earthYears * marsToEarthYearRatio).toFixed(2));
   }
+
+  calcJupiterYears() {}
 }

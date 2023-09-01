@@ -39,24 +39,6 @@ export default class GalacticAge {
     }
   }
 
-  calcVenusYears() {
-    let eDaysInAYearVenus = 225;
-    let eDaysInAYearEarth = 365;
-    this.venusYears = Number(parseFloat((eDaysInAYearVenus / eDaysInAYearEarth) * this.earthYears).toFixed(2));
-  }
-
-  calcMarsYears() {
-    let eDaysInAYearMars = 687;
-    let eDaysInAYearEarth = 365;
-    this.marsYears = Number(parseFloat((eDaysInAYearMars / eDaysInAYearEarth) * this.earthYears).toFixed(2));
-  }
-
-  calcJupiterYears() {
-    let eDaysInAYearJupiter = 4333;
-    let eDaysInAYearEarth = 365;
-    this.jupiterYears = Number(parseFloat((eDaysInAYearJupiter / eDaysInAYearEarth) * this.earthYears).toFixed(2));
-  }
-
   yearsPassedInMercuryYears(ageInAPastDate) {
     let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
     let eDaysInAYearMercury = 88;

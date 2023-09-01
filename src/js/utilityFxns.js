@@ -1,4 +1,8 @@
 export function earthYearsDifference(presentAge, pastAge) {
-  let differenceInYears = presentAge - pastAge;
-  return differenceInYears;
+  if (presentAge <= 0) {
+    return null;
+  } else {
+    let differenceInYears = presentAge - pastAge;
+    return differenceInYears;
+  }
 }

@@ -44,4 +44,6 @@ export default class GalacticAge {
     let mercuryToEarthYearRatio = eDaysInAYearMercury / eDaysInAYearEarth;
     return Number(parseFloat(ageDifference / mercuryToEarthYearRatio).toFixed(2));
   }
+
+  yearsPassedInVenusYears() {}
 }

@@ -51,4 +51,13 @@ describe("GalacticAge", () => {
     let conversion = newInstance.yearsPassedInMercuryYears(ageThen);
     expect(conversion).toEqual(53.92);
   });
+
+  // method yearsPassedInVenusYears
+  test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Venus years that have passed", () => {
+    let usersEarthAge = 56;
+    const newInstance = new GalacticAge(usersEarthAge);
+    let ageThen = 43;
+    let conversion = newInstance.yearsPassedInVenusYears(ageThen);
+    expect(conversion).toEqual(21.09);
+  });
 });

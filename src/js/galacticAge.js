@@ -65,7 +65,7 @@ export default class GalacticAge {
       case "venus":
         return Number(parseFloat(ageDifference / (eDaysInAYearVenus / eDaysInAYearEarth)).toFixed(2));
       case "mars":
-        break;
+        return Number(parseFloat(ageDifference / (eDaysInAYearMars / eDaysInAYearEarth)).toFixed(2));
       case "jupiter":
         break;
       default:

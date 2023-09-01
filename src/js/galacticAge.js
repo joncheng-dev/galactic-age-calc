@@ -8,9 +8,16 @@ export default class GalacticAge {
   }
 
   calcMercuryYears() {
-    let eDaysInOneYearMercury = 88;
-    let eDaysInOneYearEarth = 365;
-    let mercuryToEarthYearRatio = eDaysInOneYearMercury / eDaysInOneYearEarth;
+    let eDaysInAYearMercury = 88;
+    let eDaysInAYearEarth = 365;
+    let mercuryToEarthYearRatio = eDaysInAYearMercury / eDaysInAYearEarth;
     this.mercuryYears = Number(parseFloat(this.earthYears * mercuryToEarthYearRatio).toFixed(2));
+  }
+
+  calcVenusYears() {
+    let eDaysInAYearVenus = 225;
+    let eDaysInAYearEarth = 365;
+    let venusToEarthYearRatio = eDaysInAYearVenus / eDaysInAYearEarth;
+    this.venusYears = Number(parseFloat(this.earthYears * venusToEarthYearRatio).toFixed(2));
   }
 }

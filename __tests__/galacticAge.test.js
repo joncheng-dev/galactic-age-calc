@@ -12,10 +12,18 @@ describe("GalacticAge", () => {
   });
 
   // method calcMercuryYears
-  test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer", () => {
+  test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer set to 2 decimal places", () => {
     let usersEarthAge = 1;
     const newInstance = new GalacticAge(usersEarthAge);
     newInstance.calcMercuryYears();
     expect(newInstance.mercuryYears).toEqual(0.24);
+  });
+
+  // method calcVenusYears
+  test("should take the 'this.earthYears' value and use it to calculate venus years, updating this.venusYears with its result set to 2 decimal places", () => {
+    let usersEarthAge = 1;
+    const newInstance = new GalacticAge(usersEarthAge);
+    newInstance.calcVenusYears();
+    expect(newInstance.venusYears).toEqual(0.62);
   });
 });

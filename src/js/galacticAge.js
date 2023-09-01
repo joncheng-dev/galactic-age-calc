@@ -1,3 +1,9 @@
 export default class GalacticAge {
-  constructor() {}
+  constructor(eYears) {
+    this.mercuryYears = null;
+    this.earthYears = eYears;
+    this.venusYears = null;
+    this.marsYears = null;
+    this.jupiterYears = null;
+  }
 }

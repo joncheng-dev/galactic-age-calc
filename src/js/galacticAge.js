@@ -12,29 +12,25 @@ export default class GalacticAge {
   calcMercuryYears() {
     let eDaysInAYearMercury = 88;
     let eDaysInAYearEarth = 365;
-    let mercuryToEarthYearRatio = eDaysInAYearMercury / eDaysInAYearEarth;
-    this.mercuryYears = Number(parseFloat(this.earthYears * mercuryToEarthYearRatio).toFixed(2));
+    this.mercuryYears = Number(parseFloat((eDaysInAYearMercury / eDaysInAYearEarth) * this.earthYears).toFixed(2));
   }
 
   calcVenusYears() {
     let eDaysInAYearVenus = 225;
     let eDaysInAYearEarth = 365;
-    let venusToEarthYearRatio = eDaysInAYearVenus / eDaysInAYearEarth;
-    this.venusYears = Number(parseFloat(this.earthYears * venusToEarthYearRatio).toFixed(2));
+    this.venusYears = Number(parseFloat((eDaysInAYearVenus / eDaysInAYearEarth) * this.earthYears).toFixed(2));
   }
 
   calcMarsYears() {
     let eDaysInAYearMars = 687;
     let eDaysInAYearEarth = 365;
-    let marsToEarthYearRatio = eDaysInAYearMars / eDaysInAYearEarth;
-    this.marsYears = Number(parseFloat(this.earthYears * marsToEarthYearRatio).toFixed(2));
+    this.marsYears = Number(parseFloat((eDaysInAYearMars / eDaysInAYearEarth) * this.earthYears).toFixed(2));
   }
 
   calcJupiterYears() {
     let eDaysInAYearJupiter = 4333;
     let eDaysInAYearEarth = 365;
-    let jupiterToEarthYearRatio = eDaysInAYearJupiter / eDaysInAYearEarth;
-    this.jupiterYears = Number(parseFloat(this.earthYears * jupiterToEarthYearRatio).toFixed(2));
+    this.jupiterYears = Number(parseFloat((eDaysInAYearJupiter / eDaysInAYearEarth) * this.earthYears).toFixed(2));
   }
 
   yearsPassedInMercuryYears(ageInAPastDate) {

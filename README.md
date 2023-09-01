@@ -14,11 +14,11 @@
 
 ## Description
 
-This is my week 5 individual project for Epicodus. The focus of the project is using classes introduced in JavaScript ES6 as well as using Jest to show ability in Test Driven Development (TDD).
+This is my week 5 individual project for Epicodus. The focus of the project is using classes introduced in JavaScript ES6 as well as using Jest to show ability in Test Driven Development (TDD) with 100% coverage.
 
 ## Setup/Installation Requirements
 
-- _Clone the repository from the GitHub:_
+- _Clone the repository from the GitHub: https://github.com/joncheng-dev/galactic-age-calc.git_
 - _Navigate to the project's root directory._
 - _In your terminal, run `$ npm install` from the root directory to install all packages._
 - _Build the project using webpack using `$ npm run build`_

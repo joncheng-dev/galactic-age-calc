@@ -1,8 +1,8 @@
-# (Application Name)
+# Galactic Age Calculator
 
 #### (Brief Description of Application)
 
-#### By (Your Name Here)
+#### By Jonathan Cheng
 
 ## Technologies Used
 
@@ -13,6 +13,8 @@
 - _npm v8.1.2_
 
 ## Description
+
+This is my week 5 individual project for Epicodus. The focus of the project is using classes introduced in JavaScript ES6 as well as using Jest to show ability in Test Driven Development (TDD).
 
 ## Setup/Installation Requirements
 
@@ -39,4 +41,4 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Copyright (c) _year_ _name_
+Copyright (c) _2023_ _Jonathan Cheng_

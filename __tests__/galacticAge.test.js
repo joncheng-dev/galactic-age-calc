@@ -71,4 +71,10 @@ describe("GalacticAge Methods to Calculate Years Passed on Different Planets Rel
     let conversion = newInstance.yearsPassedInMarsYears(ageThen);
     expect(conversion).toEqual(6.91);
   });
+
+  // method yearsPassedInJupiterYears
+  test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Jupiter years that have passed", () => {
+    let conversion = newInstance.yearsPassedInJupiterYears(ageThen);
+    expect(conversion).toEqual(1.1);
+  });
 });

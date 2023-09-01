@@ -44,10 +44,11 @@ describe("GalacticAge", () => {
   });
 
   // method yearsPassedInMercuryYears
-  test("should take in two parameters -- a user's current age, and how many years passed since a past birthday, and returns the number of Mercury years that have passed", () => {
-    let usersEarthAge = 13;
+  test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Mercury years that have passed", () => {
+    let usersEarthAge = 56;
     const newInstance = new GalacticAge(usersEarthAge);
-    let conversion = newInstance.yearsPassedInMercuryYears();
+    let ageThen = 43;
+    let conversion = newInstance.yearsPassedInMercuryYears(newInstance.earthYears, ageThen);
     expect(conversion).toEqual(54.16);
   });
 });

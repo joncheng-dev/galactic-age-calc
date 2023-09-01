@@ -10,29 +10,24 @@ export default class GalacticAge {
   }
 
   calcEarthYearsToPlanetYrs(targetPlanet) {
-    let eDaysInAYearMercury = 88;
-    let eDaysInAYearEarth = 365;
-    let eDaysInAYearVenus = 225;
-    let eDaysInAYearMars = 687;
-    let eDaysInAYearJupiter = 4333;
+    const eDaysInAYearMercury = 88;
+    const eDaysInAYearEarth = 365;
+    const eDaysInAYearVenus = 225;
+    const eDaysInAYearMars = 687;
+    const eDaysInAYearJupiter = 4333;
 
-    let eDaysInTargetPlanetsYear;
     switch (targetPlanet) {
       case "mercury":
-        eDaysInTargetPlanetsYear = eDaysInAYearMercury;
-        this.mercuryYears = Number(parseFloat((eDaysInTargetPlanetsYear / eDaysInAYearEarth) * this.earthYears).toFixed(2));
+        this.mercuryYears = Number(parseFloat((eDaysInAYearMercury / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
       case "venus":
-        eDaysInTargetPlanetsYear = eDaysInAYearVenus;
-        this.venusYears = Number(parseFloat((eDaysInTargetPlanetsYear / eDaysInAYearEarth) * this.earthYears).toFixed(2));
+        this.venusYears = Number(parseFloat((eDaysInAYearVenus / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
       case "mars":
-        eDaysInTargetPlanetsYear = eDaysInAYearMars;
-        this.marsYears = Number(parseFloat((eDaysInTargetPlanetsYear / eDaysInAYearEarth) * this.earthYears).toFixed(2));
+        this.marsYears = Number(parseFloat((eDaysInAYearMars / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
       case "jupiter":
-        eDaysInTargetPlanetsYear = eDaysInAYearJupiter;
-        this.jupiterYears = Number(parseFloat((eDaysInTargetPlanetsYear / eDaysInAYearEarth) * this.earthYears).toFixed(2));
+        this.jupiterYears = Number(parseFloat((eDaysInAYearJupiter / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
       default:
         break;

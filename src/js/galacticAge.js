@@ -65,4 +65,6 @@ export default class GalacticAge {
     let jupiterToEarthYearRatio = eDaysInAYearJupiter / eDaysInAYearEarth;
     return Number(parseFloat(ageDifference / jupiterToEarthYearRatio).toFixed(2));
   }
+
+  yearsPassedInTargetPlanetYears() {}
 }

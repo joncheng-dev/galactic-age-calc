@@ -21,16 +21,11 @@ describe("GalacticAge Methods to Calculate Different Planets' Years Relative to 
     newInstance = new GalacticAge(usersEarthAge);
   });
 
-  // method calcMercuryYears
-  // test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer set to 2 decimal places", () => {
-  //   newInstance.calcMercuryYears();
-  //   expect(newInstance.mercuryYears).toEqual(0.24);
+  // // method calcVenusYears
+  // test("should take the 'this.earthYears' value and use it to calculate venus years, updating this.venusYears with its result set to 2 decimal places", () => {
+  //   newInstance.calcVenusYears();
+  //   expect(newInstance.venusYears).toEqual(0.62);
   // });
-  // method calcVenusYears
-  test("should take the 'this.earthYears' value and use it to calculate venus years, updating this.venusYears with its result set to 2 decimal places", () => {
-    newInstance.calcVenusYears();
-    expect(newInstance.venusYears).toEqual(0.62);
-  });
   // method calcMarsYears
   test("should take the 'this.earthYears' value and use it to calculate mars years, updating this.marsYears with its result set to 2 decimal places", () => {
     newInstance.calcMarsYears();
@@ -45,6 +40,10 @@ describe("GalacticAge Methods to Calculate Different Planets' Years Relative to 
   test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer set to 2 decimal places", () => {
     newInstance.calcEarthYearsToPlanetYrs("mercury");
     expect(newInstance.mercuryYears).toEqual(0.24);
+  });
+  test("should take the 'this.earthYears' value and use it to calculate venus years, updating this.venusYears with its answer set to 2 decimal places", () => {
+    newInstance.calcEarthYearsToPlanetYrs("venus");
+    expect(newInstance.venusYears).toEqual(0.62);
   });
 });
 

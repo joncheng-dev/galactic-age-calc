@@ -34,21 +34,13 @@ export default class GalacticAge {
     }
   }
 
-  yearsPassedInMarsYears(ageInAPastDate) {
-    let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
-    let eDaysInAYearMars = 687;
-    let eDaysInAYearEarth = 365;
-    let marsToEarthYearRatio = eDaysInAYearMars / eDaysInAYearEarth;
-    return Number(parseFloat(ageDifference / marsToEarthYearRatio).toFixed(2));
-  }
-
-  yearsPassedInJupiterYears(ageInAPastDate) {
-    let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
-    let eDaysInAYearJupiter = 4333;
-    let eDaysInAYearEarth = 365;
-    let jupiterToEarthYearRatio = eDaysInAYearJupiter / eDaysInAYearEarth;
-    return Number(parseFloat(ageDifference / jupiterToEarthYearRatio).toFixed(2));
-  }
+  // yearsPassedInJupiterYears(ageInAPastDate) {
+  //   let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
+  //   let eDaysInAYearJupiter = 4333;
+  //   let eDaysInAYearEarth = 365;
+  //   let jupiterToEarthYearRatio = eDaysInAYearJupiter / eDaysInAYearEarth;
+  //   return Number(parseFloat(ageDifference / jupiterToEarthYearRatio).toFixed(2));
+  // }
 
   yearsPassedInTargetPlanetYears(targetPlanet, ageInAPastDate) {
     const eDaysInAYearMercury = 88;
@@ -67,7 +59,7 @@ export default class GalacticAge {
       case "mars":
         return Number(parseFloat(ageDifference / (eDaysInAYearMars / eDaysInAYearEarth)).toFixed(2));
       case "jupiter":
-        break;
+        return Number(parseFloat(ageDifference / (eDaysInAYearJupiter / eDaysInAYearEarth)).toFixed(2));
       default:
         break;
     }

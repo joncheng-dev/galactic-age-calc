@@ -13,10 +13,9 @@ describe("GalacticAge", () => {
 
   // method calcMercuryYears
   test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer", () => {
-    let usersEarthAge = 50;
+    let usersEarthAge = 1;
     const newInstance = new GalacticAge(usersEarthAge);
     newInstance.calcMercuryYears();
-    console.log(newInstance.mercuryYears);
     expect(newInstance.mercuryYears).toEqual(0.24);
   });
 });

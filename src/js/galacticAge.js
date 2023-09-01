@@ -24,6 +24,7 @@ export default class GalacticAge {
         break;
       case "venus":
         eDaysInTargetPlanetsYear = eDaysInAYearVenus;
+        this.venusYears = Number(parseFloat((eDaysInTargetPlanetsYear / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
       case "mars":
         eDaysInTargetPlanetsYear = eDaysInAYearMars;

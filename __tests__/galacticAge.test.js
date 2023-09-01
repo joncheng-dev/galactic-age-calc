@@ -10,53 +10,58 @@ describe("GalacticAge", () => {
     expect(newInstance.marsYears).toEqual(null);
     expect(newInstance.jupiterYears).toEqual(null);
   });
+});
+
+describe("Methods to Calculate Different Planets' Years Relative to Earth", () => {
+  let usersEarthAge;
+  let newInstance;
+
+  beforeEach(() => {
+    usersEarthAge = 1;
+    newInstance = new GalacticAge(usersEarthAge);
+  });
 
   // method calcMercuryYears
   test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer set to 2 decimal places", () => {
-    let usersEarthAge = 1;
-    const newInstance = new GalacticAge(usersEarthAge);
     newInstance.calcMercuryYears();
     expect(newInstance.mercuryYears).toEqual(0.24);
   });
-
   // method calcVenusYears
   test("should take the 'this.earthYears' value and use it to calculate venus years, updating this.venusYears with its result set to 2 decimal places", () => {
-    let usersEarthAge = 1;
-    const newInstance = new GalacticAge(usersEarthAge);
     newInstance.calcVenusYears();
     expect(newInstance.venusYears).toEqual(0.62);
   });
-
   // method calcMarsYears
   test("should take the 'this.earthYears' value and use it to calculate mars years, updating this.marsYears with its result set to 2 decimal places", () => {
-    let usersEarthAge = 1;
-    const newInstance = new GalacticAge(usersEarthAge);
     newInstance.calcMarsYears();
     expect(newInstance.marsYears).toEqual(1.88);
   });
-
   // method calcJupiterYears
-  test("should take the 'this.earthYears' value and use it to calculate jupiter years, updating this.jupterYears with its result set to 2 decimal places", () => {
-    let usersEarthAge = 1;
-    const newInstance = new GalacticAge(usersEarthAge);
+  test("should take the 'this.earthYears' value and use it to calculate jupiter years, updating this.jupiterYears with its result set to 2 decimal places", () => {
     newInstance.calcJupiterYears();
     expect(newInstance.jupiterYears).toEqual(11.87);
+  });
+});
+
+describe("Methods to Calculate Years Passed on Different Planets Relative to Earth Years", () => {
+  let usersEarthAge;
+  let newInstance;
+  let ageThen;
+
+  beforeEach(() => {
+    usersEarthAge = 56;
+    newInstance = new GalacticAge(usersEarthAge);
+    ageThen = 43;
   });
 
   // method yearsPassedInMercuryYears
   test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Mercury years that have passed", () => {
-    let usersEarthAge = 56;
-    const newInstance = new GalacticAge(usersEarthAge);
-    let ageThen = 43;
     let conversion = newInstance.yearsPassedInMercuryYears(ageThen);
     expect(conversion).toEqual(53.92);
   });
 
   // method yearsPassedInVenusYears
   test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Venus years that have passed", () => {
-    let usersEarthAge = 56;
-    const newInstance = new GalacticAge(usersEarthAge);
-    let ageThen = 43;
     let conversion = newInstance.yearsPassedInVenusYears(ageThen);
     expect(conversion).toEqual(21.09);
   });

@@ -1,6 +1,6 @@
 # Galactic Age Calculator
 
-#### (Brief Description of Application)
+#### An app that determines a user's age based on a planet's solar years.
 
 #### By Jonathan Cheng
 

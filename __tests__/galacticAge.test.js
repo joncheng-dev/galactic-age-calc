@@ -55,17 +55,11 @@ describe("GalacticAge Methods to Calculate Years Passed on Different Planets Rel
     ageThen = 43;
   });
 
-  // // method yearsPassedInMercuryYears
-  // test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Mercury years that have passed", () => {
-  //   let conversion = newInstance.yearsPassedInMercuryYears(ageThen);
-  //   expect(conversion).toEqual(53.92);
+  // // method yearsPassedInVenusYears
+  // test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Venus years that have passed", () => {
+  //   let conversion = newInstance.yearsPassedInVenusYears(ageThen);
+  //   expect(conversion).toEqual(21.09);
   // });
-
-  // method yearsPassedInVenusYears
-  test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Venus years that have passed", () => {
-    let conversion = newInstance.yearsPassedInVenusYears(ageThen);
-    expect(conversion).toEqual(21.09);
-  });
 
   // method yearsPassedInMarsYears
   test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Mars years that have passed", () => {
@@ -83,5 +77,9 @@ describe("GalacticAge Methods to Calculate Years Passed on Different Planets Rel
   test("should take in two parameters -- 'target planet' (in this case, Mercury), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Mercury years that have passed", () => {
     let conversion = newInstance.yearsPassedInTargetPlanetYears("mercury", ageThen);
     expect(conversion).toEqual(53.92);
+  });
+  test("should take in two parameters -- 'target planet' (in this case, Venus), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Venus years that have passed", () => {
+    let conversion = newInstance.yearsPassedInTargetPlanetYears("venus", ageThen);
+    expect(conversion).toEqual(21.09);
   });
 });

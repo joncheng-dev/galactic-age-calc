@@ -21,5 +21,10 @@ export default class GalacticAge {
     this.venusYears = Number(parseFloat(this.earthYears * venusToEarthYearRatio).toFixed(2));
   }
 
-  calcMarsYears() {}
+  calcMarsYears() {
+    let eDaysInAYearMars = 687;
+    let eDaysInAYearEarth = 365;
+    let marsToEarthYearRatio = eDaysInAYearMars / eDaysInAYearEarth;
+    this.marsYears = Number(parseFloat(this.earthYears * marsToEarthYearRatio).toFixed(2));
+  }
 }

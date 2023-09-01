@@ -20,4 +20,6 @@ export default class GalacticAge {
     let venusToEarthYearRatio = eDaysInAYearVenus / eDaysInAYearEarth;
     this.venusYears = Number(parseFloat(this.earthYears * venusToEarthYearRatio).toFixed(2));
   }
+
+  calcMarsYears() {}
 }

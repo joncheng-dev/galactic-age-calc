@@ -26,4 +26,12 @@ describe("GalacticAge", () => {
     newInstance.calcVenusYears();
     expect(newInstance.venusYears).toEqual(0.62);
   });
+
+  // method calcMarsYears
+  test("should take the 'this.earthYears' value and use it to calculate mars years, updating this.marsYears with its result set to 2 decimal places", () => {
+    let usersEarthAge = 1;
+    const newInstance = new GalacticAge(usersEarthAge);
+    newInstance.calcMarsYears();
+    expect(newInstance.marsYears).toEqual(1.88);
+  });
 });

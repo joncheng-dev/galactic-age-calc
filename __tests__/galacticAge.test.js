@@ -22,10 +22,10 @@ describe("GalacticAge Methods to Calculate Different Planets' Years Relative to 
   });
 
   // method calcMercuryYears
-  test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer set to 2 decimal places", () => {
-    newInstance.calcMercuryYears();
-    expect(newInstance.mercuryYears).toEqual(0.24);
-  });
+  // test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer set to 2 decimal places", () => {
+  //   newInstance.calcMercuryYears();
+  //   expect(newInstance.mercuryYears).toEqual(0.24);
+  // });
   // method calcVenusYears
   test("should take the 'this.earthYears' value and use it to calculate venus years, updating this.venusYears with its result set to 2 decimal places", () => {
     newInstance.calcVenusYears();
@@ -40,6 +40,11 @@ describe("GalacticAge Methods to Calculate Different Planets' Years Relative to 
   test("should take the 'this.earthYears' value and use it to calculate jupiter years, updating this.jupiterYears with its result set to 2 decimal places", () => {
     newInstance.calcJupiterYears();
     expect(newInstance.jupiterYears).toEqual(11.87);
+  });
+  // summarized method for calc different planet years
+  test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer set to 2 decimal places", () => {
+    newInstance.calcEarthYearsToPlanetYrs("mercury");
+    expect(newInstance.mercuryYears).toEqual(0.24);
   });
 });
 

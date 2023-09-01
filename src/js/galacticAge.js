@@ -9,11 +9,7 @@ export default class GalacticAge {
     this.jupiterYears = null;
   }
 
-  calcMercuryYears() {
-    let eDaysInAYearMercury = 88;
-    let eDaysInAYearEarth = 365;
-    this.mercuryYears = Number(parseFloat((eDaysInAYearMercury / eDaysInAYearEarth) * this.earthYears).toFixed(2));
-  }
+  calcEarthYearsToPlanetYrs() {}
 
   calcVenusYears() {
     let eDaysInAYearVenus = 225;

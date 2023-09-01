@@ -6,4 +6,6 @@ export default class GalacticAge {
     this.marsYears = null;
     this.jupiterYears = null;
   }
+
+  calcMercuryYears() {}
 }

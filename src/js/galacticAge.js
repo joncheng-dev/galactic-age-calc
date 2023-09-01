@@ -34,14 +34,6 @@ export default class GalacticAge {
     }
   }
 
-  // yearsPassedInJupiterYears(ageInAPastDate) {
-  //   let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
-  //   let eDaysInAYearJupiter = 4333;
-  //   let eDaysInAYearEarth = 365;
-  //   let jupiterToEarthYearRatio = eDaysInAYearJupiter / eDaysInAYearEarth;
-  //   return Number(parseFloat(ageDifference / jupiterToEarthYearRatio).toFixed(2));
-  // }
-
   yearsPassedInTargetPlanetYears(targetPlanet, ageInAPastDate) {
     const eDaysInAYearMercury = 88;
     const eDaysInAYearEarth = 365;

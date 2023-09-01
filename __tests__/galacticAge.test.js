@@ -55,12 +55,6 @@ describe("GalacticAge Methods to Calculate Years Passed on Different Planets Rel
     ageThen = 43;
   });
 
-  // // method yearsPassedInJupiterYears
-  // test("should take in one parameter -- 'how many years passed since a past birthday' -- then uses the user's current Earth age property to calculate and return the number of Jupiter years that have passed", () => {
-  //   let conversion = newInstance.yearsPassedInJupiterYears(ageThen);
-  //   expect(conversion).toEqual(1.1);
-  // });
-
   // method yearsPassedInTargetPlanetYears
   test("should take in two parameters -- 'target planet' (in this case, Mercury), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Mercury years that have passed", () => {
     let conversion = newInstance.yearsPassedInTargetPlanetYears("mercury", ageThen);
@@ -77,5 +71,13 @@ describe("GalacticAge Methods to Calculate Years Passed on Different Planets Rel
   test("should take in two parameters -- 'target planet' (in this case, Jupiter), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Jupiter years that have passed", () => {
     let conversion = newInstance.yearsPassedInTargetPlanetYears("jupiter", ageThen);
     expect(conversion).toEqual(1.1);
+  });
+  test("should take in two parameters -- 'target planet' (in this case, Jupiter), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Jupiter years that have passed", () => {
+    let conversion = newInstance.yearsPassedInTargetPlanetYears("jupiter", ageThen);
+    expect(conversion).toEqual(1.1);
+  });
+  test("should take in two parameters -- 'target planet' (in this case, a non-accepted value), and 'how many years passed since a past birthday' and end method with break.", () => {
+    let conversion = newInstance.yearsPassedInTargetPlanetYears(0, ageThen);
+    expect(conversion).toBeUndefined();
   });
 });

@@ -34,22 +34,6 @@ export default class GalacticAge {
     }
   }
 
-  // yearsPassedInMercuryYears(ageInAPastDate) {
-  //   let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
-  //   let eDaysInAYearMercury = 88;
-  //   let eDaysInAYearEarth = 365;
-  //   let mercuryToEarthYearRatio = eDaysInAYearMercury / eDaysInAYearEarth;
-  //   return Number(parseFloat(ageDifference / mercuryToEarthYearRatio).toFixed(2));
-  // }
-
-  yearsPassedInVenusYears(ageInAPastDate) {
-    let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
-    let eDaysInAYearVenus = 225;
-    let eDaysInAYearEarth = 365;
-    let venusToEarthYearRatio = eDaysInAYearVenus / eDaysInAYearEarth;
-    return Number(parseFloat(ageDifference / venusToEarthYearRatio).toFixed(2));
-  }
-
   yearsPassedInMarsYears(ageInAPastDate) {
     let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
     let eDaysInAYearMars = 687;
@@ -79,7 +63,7 @@ export default class GalacticAge {
       case "mercury":
         return Number(parseFloat(ageDifference / (eDaysInAYearMercury / eDaysInAYearEarth)).toFixed(2));
       case "venus":
-        break;
+        return Number(parseFloat(ageDifference / (eDaysInAYearVenus / eDaysInAYearEarth)).toFixed(2));
       case "mars":
         break;
       case "jupiter":

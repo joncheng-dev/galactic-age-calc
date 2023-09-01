@@ -7,4 +7,11 @@ describe("earthYearsDifference utility function", () => {
     let difference = earthYearsDifference(ageNow, ageThen);
     expect(difference).toEqual(13);
   });
+
+  test("should take in two parameters, presentAge and pastAge, and return null if presentAge is not > 1", () => {
+    let ageNow = 0;
+    let ageThen = 5;
+    let difference = earthYearsDifference(ageNow, ageThen);
+    expect(difference).toEqual(null);
+  });
 });

@@ -9,7 +9,7 @@ export default class GalacticAge {
     this.jupiterYears = null;
   }
 
-  calcEarthYearsToPlanetYrs(targetPlanet) {
+  convertEarthYrsToPlanetYrs(targetPlanet) {
     const eDaysInAYearMercury = 88;
     const eDaysInAYearEarth = 365;
     const eDaysInAYearVenus = 225;
@@ -34,7 +34,7 @@ export default class GalacticAge {
     }
   }
 
-  yearsPassedInTargetPlanetYears(targetPlanet, ageInAPastDate) {
+  convertYrsPassedToTargetPlanetYrs(targetPlanet, ageInAPastDate) {
     const eDaysInAYearMercury = 88;
     const eDaysInAYearEarth = 365;
     const eDaysInAYearVenus = 225;

@@ -10,7 +10,7 @@ export function earthYearsDifference(age1, age2) {
 }
 
 export function stringToLowerCase(string) {
-  // return string.toLowerCase();
+  return string.toLowerCase();
 }
 
 // export function fixFormatPlanetName(string) {

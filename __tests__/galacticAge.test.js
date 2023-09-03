@@ -103,4 +103,8 @@ describe("GalacticAge Method to Calculate Earth Years Until a Future Date on Con
     let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("venus", ageInFuture);
     expect(conversion).toEqual(8.11);
   });
+  test("should take in two parameters -- 'target planet' (in this case, Mars), and 'how many years until a future date'. Method uses the user's current Earth age property to calculate and return the number of Mars years that will need to elapse", () => {
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("mars", ageInFuture);
+    expect(conversion).toEqual(2.66);
+  });
 });

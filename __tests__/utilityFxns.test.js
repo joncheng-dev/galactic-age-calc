@@ -59,4 +59,9 @@ describe("confirmAlphaCharOnly utility function", () => {
     let result = confirmAlphaCharOnly(sampleString);
     expect(result).toEqual(true);
   });
+  test("should take in a string and return false when there are more than just alpha characters are found in string", () => {
+    let sampleString = "r2d2";
+    let result = confirmAlphaCharOnly(sampleString);
+    expect(result).toEqual(false);
+  });
 });

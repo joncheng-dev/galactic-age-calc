@@ -120,3 +120,23 @@ describe("GalacticAge Method to Calculate Earth Years Until a Future Date on Con
     expect(conversion).toEqual(5);
   });
 });
+
+describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
+  let usersEarthAge;
+  let newInstance;
+
+  beforeEach(() => {
+    usersEarthAge = 1;
+    newInstance = new GalacticAge(usersEarthAge);
+  });
+
+  test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and target planet Mercury.", () => {
+    let planetOfInterest = "mercury";
+    // this.earthYears is available --> initially passed in as argument
+    // this.mercuryYears is available --> result
+    // planetOfInterest is available --> "mercury"
+    // need a utility function that takes in the user's entered string for planet name and returns it properly formatted (i.e. 'mErcury --> Mercury');
+    let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
+    expect(stringResponse).toEqual("A Mercury year is 0.24 Earth years.");
+  });
+});

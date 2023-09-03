@@ -58,4 +58,6 @@ export default class GalacticAge {
         break;
     }
   }
+
+  createConvertedPlanetYrsString(targetPlanet) {}
 }

@@ -55,7 +55,7 @@ describe("GalacticAge Methods to Calculate Years Passed on Different Planets Rel
     ageThen = 43;
   });
 
-  // method convertYrsDifferenceToTargetPlanetYrs
+  // method convertYrsDifferenceToTargetPlanetYrs -- use a past year, calculate number of years to present
   test("should take in two parameters -- 'target planet' (in this case, Mercury), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Mercury years that have passed", () => {
     let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("mercury", ageThen);
     expect(conversion).toEqual(53.92);
@@ -98,7 +98,7 @@ describe("GalacticAge Method to Calculate Earth Years Until a Future Date on Con
     ageInFuture = 61;
   });
 
-  // method convertYrsDiffToTargetPlanetYrs
+  // method convertYrsDifferenceToTargetPlanetYrs -- use a future year, how many years until target date
   test("should take in two parameters -- 'target planet' (in this case, Mercury), and 'how many years until a future date'. Method uses the user's current Earth age property to calculate and return the number of Mercury years that will need to elapse", () => {
     let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("mercury", ageInFuture);
     expect(conversion).toEqual(20.74);

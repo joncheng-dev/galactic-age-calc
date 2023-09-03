@@ -34,14 +34,14 @@ export default class GalacticAge {
     }
   }
 
-  convertYrsPassedToTargetPlanetYrs(targetPlanet, ageInAPastDate) {
+  convertYrsDifferenceToTargetPlanetYrs(targetPlanet, numYrsIntoPastOrFuture) {
     const eDaysInAYearMercury = 88;
     const eDaysInAYearEarth = 365;
     const eDaysInAYearVenus = 225;
     const eDaysInAYearMars = 687;
     const eDaysInAYearJupiter = 4333;
 
-    let ageDifference = earthYearsDifference(this.earthYears, ageInAPastDate);
+    let ageDifference = earthYearsDifference(this.earthYears, numYrsIntoPastOrFuture);
 
     switch (targetPlanet) {
       case "mercury":

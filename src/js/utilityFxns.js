@@ -13,6 +13,8 @@ export function stringToLowerCase(string) {
   return string.toLowerCase();
 }
 
+export function confirmAlphaCharOnly(string) {}
+
 // export function fixFormatPlanetName(string) {
 //   let upperCamelCaseName = string.toLowerCase();
 // }

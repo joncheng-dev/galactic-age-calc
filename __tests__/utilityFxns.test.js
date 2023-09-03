@@ -1,4 +1,4 @@
-import { earthYearsDifference, stringToLowerCase } from "../src/js/utilityFxns.js";
+import { earthYearsDifference, stringToLowerCase, confirmAlphaCharOnly } from "../src/js/utilityFxns.js";
 
 describe("earthYearsDifference utility function", () => {
   test("should take in two parameters, presentAge and pastAge, and return the difference", () => {
@@ -50,5 +50,13 @@ describe("stringToLowerCase utility function", () => {
     let sampleString = "cOfFeE";
     let result = stringToLowerCase(sampleString);
     expect(result).toEqual("coffee");
+  });
+});
+
+describe("confirmAlphaCharOnly utility function", () => {
+  test("should take in a string and return true when only alpha characters are found in string", () => {
+    let sampleString = "intergalactic";
+    let result = confirmAlphaCharOnly(sampleString);
+    expect(result).toEqual(true);
   });
 });

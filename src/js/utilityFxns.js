@@ -1,10 +1,10 @@
-export function earthYearsDifference(presentAge, pastAge) {
-  if (typeof presentAge !== "number" || typeof pastAge !== "number") {
+export function earthYearsDifference(age1, age2) {
+  if (typeof age1 !== "number" || typeof age2 !== "number") {
     return null;
-  } else if (presentAge <= 0 || pastAge <= 0) {
+  } else if (age1 <= 0 || age2 <= 0) {
     return null;
   } else {
-    let differenceInYears = presentAge - pastAge;
+    let differenceInYears = Math.abs(age1 - age2);
     return differenceInYears;
   }
 }

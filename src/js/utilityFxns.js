@@ -8,3 +8,11 @@ export function earthYearsDifference(age1, age2) {
     return differenceInYears;
   }
 }
+
+export function stringToLowerCase(string) {
+  // return string.toLowerCase();
+}
+
+// export function fixFormatPlanetName(string) {
+//   let upperCamelCaseName = string.toLowerCase();
+// }

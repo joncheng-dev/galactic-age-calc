@@ -35,4 +35,12 @@ describe("earthYearsDifference utility function", () => {
     let difference = earthYearsDifference(ageNow, ageThen);
     expect(difference).toEqual(null);
   });
+
+  // Testing earthYearsDifference to be functional despite switching order of two arguments passed in
+  test("should take in two parameters, presentAge and pastAge, and return the difference", () => {
+    let ageNow = 43;
+    let ageThen = 56;
+    let difference = earthYearsDifference(ageNow, ageThen);
+    expect(difference).toEqual(13);
+  });
 });

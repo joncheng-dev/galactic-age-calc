@@ -46,6 +46,8 @@ export default class GalacticAge {
     switch (targetPlanet) {
       case "mercury":
         return Number(parseFloat(ageDifference / (eDaysInAYearMercury / eDaysInAYearEarth)).toFixed(2));
+      case "earth":
+        return Number(parseFloat(ageDifference / (eDaysInAYearEarth / eDaysInAYearEarth)).toFixed(2));
       case "venus":
         return Number(parseFloat(ageDifference / (eDaysInAYearVenus / eDaysInAYearEarth)).toFixed(2));
       case "mars":

@@ -99,4 +99,8 @@ describe("GalacticAge Method to Calculate Earth Years Until a Future Date on Con
     let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("mercury", ageInFuture);
     expect(conversion).toEqual(20.74);
   });
+  test("should take in two parameters -- 'target planet' (in this case, Venus), and 'how many years until a future date'. Method uses the user's current Earth age property to calculate and return the number of Venus years that will need to elapse", () => {
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("venus", ageInFuture);
+    expect(conversion).toEqual(8.11);
+  });
 });

@@ -68,6 +68,8 @@ export default class GalacticAge {
         return `You are ${this.earthYears} year(s) old on Earth, and ${this.mercuryYears} years old on ${targetPlanetStringFormatChecked}.`;
       case "Venus":
         return `You are ${this.earthYears} year(s) old on Earth, and ${this.venusYears} years old on ${targetPlanetStringFormatChecked}.`;
+      case "Mars":
+        return `You are ${this.earthYears} year(s) old on Earth, and ${this.marsYears} years old on ${targetPlanetStringFormatChecked}.`;
       default:
         break;
     }

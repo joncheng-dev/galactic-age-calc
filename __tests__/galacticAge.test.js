@@ -140,4 +140,9 @@ describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
     let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
     expect(stringResponse).toEqual(undefined);
   });
+  test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and alpha char numerical string", () => {
+    let planetOfInterest = "r2d2";
+    let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
+    expect(stringResponse).toEqual(undefined);
+  });
 });

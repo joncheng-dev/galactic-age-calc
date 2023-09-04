@@ -14,7 +14,7 @@
 
 ## Description
 
-This is my week 5 individual project for Epicodus. The focus of the project is using classes introduced in JavaScript ES6 as well as using Jest to show ability in Test Driven Development (TDD) with 100% coverage.
+This is my week 5 individual project for Epicodus. I use modern development environments -- managing dependencies with node packaging manager, and webpack to lint, bundle, and process code. Focused in this project is the use of classes introduced in JavaScript ES6 as well as using Jest to practice Test Driven Development (TDD) with 100% coverage. I use methods to update properties of instances of classes. Also focused on is separation of concerns: e.g. utility functions grouped together; classes and their methods grouped together in their own files.
 
 ## Setup/Installation Requirements
 
@@ -24,12 +24,11 @@ This is my week 5 individual project for Epicodus. The focus of the project is u
 - _Build the project using webpack using `$ npm run build`_
 - _Lint JavaScript files with `$ npm run lint`_
 - _Run tests using Jest with `$ npm run test`_
-- _Start the development server in your browser with `$ npm run start`_
 
 ## Known Bugs
 
-- _Any known issues_
-- _should go here_
+- _There is no user interface._
+- _joncheng.dev@gmail.com_
 
 ## License
 

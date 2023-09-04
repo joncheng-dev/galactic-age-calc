@@ -17,4 +17,12 @@ export function confirmAlphaCharOnly(string) {
   return /^[a-zA-Z]+$/.test(string);
 }
 
-export function firstCharUpperCase(checkString) {}
+export function firstCharUpperCase(checkString) {
+  if (confirmAlphaCharOnly(checkString)) {
+    const lowerCasedString = stringToLowerCase(checkString);
+    const fixedString = lowerCasedString.charAt(0).toUpperCase() + lowerCasedString.slice(1);
+    return fixedString;
+  } else {
+    return null;
+  }
+}

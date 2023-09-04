@@ -1,4 +1,4 @@
-import { earthYearsDifference, stringToLowerCase, confirmAlphaCharOnly } from "../src/js/utilityFxns.js";
+import { earthYearsDifference, stringToLowerCase, confirmAlphaCharOnly, firstCharUpperCase } from "../src/js/utilityFxns.js";
 
 describe("earthYearsDifference utility function", () => {
   test("should take in two parameters, presentAge and pastAge, and return the difference", () => {

@@ -23,7 +23,7 @@ export default class GalacticAge {
       case "Venus":
         this.venusYears = Number(parseFloat((eDaysInAYearVenus / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
-      case "mars":
+      case "Mars":
         this.marsYears = Number(parseFloat((eDaysInAYearMars / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
       case "jupiter":

@@ -72,4 +72,9 @@ describe("firstCharUpperCase utility function", () => {
     let result = firstCharUpperCase(sampleString);
     expect(result).toEqual("Intergalactic");
   });
+  test("should take in a string and return null, since it's not a valid all alpha char string", () => {
+    let sampleString = "r2d2";
+    let result = firstCharUpperCase(sampleString);
+    expect(result).toEqual(null);
+  });
 });

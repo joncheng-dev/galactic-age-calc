@@ -135,4 +135,9 @@ describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
     let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
     expect(stringResponse).toEqual("You are 1 year(s) old on Earth, and 0.24 years old on Mercury.");
   });
+  test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and invalid alpha char string", () => {
+    let planetOfInterest = "intergalactic";
+    let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
+    expect(stringResponse).toEqual(undefined);
+  });
 });

@@ -60,21 +60,11 @@ export default class GalacticAge {
   }
 
   createConvertedPlanetYrsString(targetPlanet) {
-    console.log(`userInput, not uppercased: ${targetPlanet}`);
     let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
-    console.log(`first letter uppercased: ${targetPlanetStringFormatChecked}`);
-
     this.convertEarthYrsToPlanetYrs(targetPlanetStringFormatChecked);
-
-    console.log(`Mercury years: ${this.mercuryYears}`);
-    console.log(`Earth years: ${this.earthYears}`);
-    console.log(`Venus years: ${this.venusYears}`);
-    console.log(`Mars years: ${this.marsYears}`);
-    console.log(`Jupiter years: ${this.jupiterYears}`);
 
     switch (targetPlanetStringFormatChecked) {
       case "Mercury":
-        // You are 1 year(s) old, and 0.24 years old on Mercury.
         return `You are ${this.earthYears} year(s) old on Earth, and ${this.mercuryYears} years old on ${targetPlanetStringFormatChecked}.`;
       default:
         break;

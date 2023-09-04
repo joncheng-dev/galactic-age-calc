@@ -87,11 +87,6 @@ export default class GalacticAge {
     let yearsPassedResults = this.convertYrsDifferenceToTargetPlanetYrs(targetPlanet, numYrsIntoPast);
     let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
 
-    switch (targetPlanetStringFormatChecked) {
-      case "Mercury":
-        return `${yearsPassedResults} ${targetPlanetStringFormatChecked} year(s) have passed.`;
-      default:
-        break;
-    }
+    return `${yearsPassedResults} ${targetPlanetStringFormatChecked} year(s) have passed.`;
   }
 }

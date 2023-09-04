@@ -220,4 +220,8 @@ describe("GalacticAge Method - createYrsYetToPassOnTargetPlanetString", () => {
     let stringResponse = newInstance.createYrsYetToPassOnTargetPlanetString("mars", ageInFuture);
     expect(stringResponse).toEqual("2.66 Mars year(s) have yet to pass.");
   });
+  test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 5 years have yet to pass, converted to target planet Jupiter years", () => {
+    let stringResponse = newInstance.createYrsYetToPassOnTargetPlanetString("jupiter", ageInFuture);
+    expect(stringResponse).toEqual("0.42 Jupiter year(s) have yet to pass.");
+  });
 });

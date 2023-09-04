@@ -1,4 +1,4 @@
-import { earthYearsDifference } from "./utilityFxns";
+import { earthYearsDifference, firstCharUpperCase } from "./utilityFxns";
 
 export default class GalacticAge {
   constructor(eYears) {
@@ -17,7 +17,7 @@ export default class GalacticAge {
     const eDaysInAYearJupiter = 4333;
 
     switch (targetPlanet) {
-      case "mercury":
+      case "Mercury":
         this.mercuryYears = Number(parseFloat((eDaysInAYearMercury / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
       case "venus":
@@ -59,5 +59,31 @@ export default class GalacticAge {
     }
   }
 
-  createConvertedPlanetYrsString(targetPlanet) {}
+  createConvertedPlanetYrsString(targetPlanet) {
+    console.log(`userInput, not uppercased: ${targetPlanet}`);
+    let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
+    console.log(`first letter uppercased: ${targetPlanetStringFormatChecked}`);
+
+    this.convertEarthYrsToPlanetYrs(targetPlanetStringFormatChecked);
+
+    console.log(`Mercury years: ${this.mercuryYears}`);
+    console.log(`Earth years: ${this.earthYears}`);
+    console.log(`Venus years: ${this.venusYears}`);
+    console.log(`Mars years: ${this.marsYears}`);
+    console.log(`Jupiter years: ${this.jupiterYears}`);
+
+    let letterAOrNumber;
+    if (this.earthYears === 1) {
+      letterAOrNumber = "A";
+    } else {
+      letterAOrNumber = this.earthYears;
+    }
+
+    switch (targetPlanetStringFormatChecked) {
+      case "Mercury":
+        return `${letterAOrNumber} ${targetPlanetStringFormatChecked} year is ${this.mercuryYears} Earth years.`;
+      default:
+        break;
+    }
+  }
 }

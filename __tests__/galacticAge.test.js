@@ -23,7 +23,7 @@ describe("GalacticAge Methods to Calculate Different Planets' Years Relative to 
 
   // method for calc different planet years
   test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer set to 2 decimal places", () => {
-    newInstance.convertEarthYrsToPlanetYrs("mercury");
+    newInstance.convertEarthYrsToPlanetYrs("Mercury");
     expect(newInstance.mercuryYears).toEqual(0.24);
   });
   test("should take the 'this.earthYears' value and use it to calculate venus years, updating this.venusYears with its answer set to 2 decimal places", () => {
@@ -121,22 +121,22 @@ describe("GalacticAge Method to Calculate Earth Years Until a Future Date on Con
   });
 });
 
-// describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
-//   let usersEarthAge;
-//   let newInstance;
+describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
+  let usersEarthAge;
+  let newInstance;
 
-//   beforeEach(() => {
-//     usersEarthAge = 1;
-//     newInstance = new GalacticAge(usersEarthAge);
-//   });
+  beforeEach(() => {
+    usersEarthAge = 1;
+    newInstance = new GalacticAge(usersEarthAge);
+  });
 
-//   test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and target planet Mercury.", () => {
-//     let planetOfInterest = "mercury";
-//     // this.earthYears is available --> initially passed in as argument
-//     // this.mercuryYears is available --> result
-//     // planetOfInterest is available --> "mercury"
-//     // need a utility function that takes in the user's entered string for planet name and returns it properly formatted (i.e. 'mErcury --> Mercury');
-//     let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
-//     expect(stringResponse).toEqual("A Mercury year is 0.24 Earth years.");
-//   });
-// });
+  test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and target planet Mercury.", () => {
+    let planetOfInterest = "mercury";
+    // this.earthYears is available --> initially passed in as argument
+    // this.mercuryYears is available --> result
+    // planetOfInterest is available --> "mercury"
+    // need a utility function that takes in the user's entered string for planet name and returns it properly formatted (i.e. 'mErcury --> Mercury');
+    let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
+    expect(stringResponse).toEqual("A Mercury year is 0.24 Earth years.");
+  });
+});

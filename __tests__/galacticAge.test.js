@@ -145,4 +145,9 @@ describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
     let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
     expect(stringResponse).toEqual(undefined);
   });
+  test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and target planet Venus.", () => {
+    let planetOfInterest = "venus";
+    let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
+    expect(stringResponse).toEqual("You are 1 year(s) old on Earth, and 0.62 years old on Venus.");
+  });
 });

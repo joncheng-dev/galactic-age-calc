@@ -72,16 +72,10 @@ export default class GalacticAge {
     console.log(`Mars years: ${this.marsYears}`);
     console.log(`Jupiter years: ${this.jupiterYears}`);
 
-    let letterAOrNumber;
-    if (this.earthYears === 1) {
-      letterAOrNumber = "A";
-    } else {
-      letterAOrNumber = this.earthYears;
-    }
-
     switch (targetPlanetStringFormatChecked) {
       case "Mercury":
-        return `${letterAOrNumber} ${targetPlanetStringFormatChecked} year is ${this.mercuryYears} Earth years.`;
+        // You are 1 year(s) old, and 0.24 years old on Mercury.
+        return `You are ${this.earthYears} year(s) old on Earth, and ${this.mercuryYears} years old on ${targetPlanetStringFormatChecked}.`;
       default:
         break;
     }

@@ -132,11 +132,7 @@ describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
 
   test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and target planet Mercury.", () => {
     let planetOfInterest = "mercury";
-    // this.earthYears is available --> initially passed in as argument
-    // this.mercuryYears is available --> result
-    // planetOfInterest is available --> "mercury"
-    // need a utility function that takes in the user's entered string for planet name and returns it properly formatted (i.e. 'mErcury --> Mercury');
     let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
-    expect(stringResponse).toEqual("A Mercury year is 0.24 Earth years.");
+    expect(stringResponse).toEqual("You are 1 year(s) old on Earth, and 0.24 years old on Mercury.");
   });
 });

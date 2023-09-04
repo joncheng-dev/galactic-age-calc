@@ -196,3 +196,20 @@ describe("GalacticAge Method - createYrsPassedOnTargetPlanetString", () => {
     expect(stringResponse).toEqual("1.1 Jupiter year(s) have passed.");
   });
 });
+
+describe("GalacticAge Method - createYrsYetToPassOnTargetPlanetString", () => {
+  let usersEarthAge;
+  let newInstance;
+  let ageInFuture;
+
+  beforeEach(() => {
+    usersEarthAge = 56;
+    newInstance = new GalacticAge(usersEarthAge);
+    ageInFuture = 61;
+  });
+
+  test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 5 years have yet to pass, converted to target planet Mercury years", () => {
+    let stringResponse = newInstance.createYrsYetToPassOnTargetPlanetString("mercury", ageInFuture);
+    expect(stringResponse).toEqual("20.74 Mercury year(s) have yet to pass.");
+  });
+});

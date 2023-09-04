@@ -89,4 +89,6 @@ export default class GalacticAge {
 
     return `${yearsPassedResults} ${targetPlanetStringFormatChecked} year(s) have passed.`;
   }
+
+  createYrsYetToPassOnTargetPlanetString(targetPlanet, numYrsIntoFuture) {}
 }

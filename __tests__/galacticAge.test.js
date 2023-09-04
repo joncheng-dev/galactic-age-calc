@@ -168,7 +168,7 @@ describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
   });
 });
 
-describe("GalacticAge Method - createYrsPassedOnTargetPlanetString", () => {
+describe("GalacticAge Method - createYrsDifferenceOnTargetPlanetString", () => {
   let usersEarthAge;
   let newInstance;
   let ageThen;
@@ -180,24 +180,24 @@ describe("GalacticAge Method - createYrsPassedOnTargetPlanetString", () => {
   });
 
   test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 13 Earth years have passed, converted to target planet Mercury years", () => {
-    let stringResponse = newInstance.createYrsPassedOnTargetPlanetString("mercury", ageThen);
+    let stringResponse = newInstance.createYrsDifferenceOnTargetPlanetString("mercury", ageThen);
     expect(stringResponse).toEqual("53.92 Mercury year(s) have passed.");
   });
   test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 13 Earth years have passed, converted to target planet Venus years", () => {
-    let stringResponse = newInstance.createYrsPassedOnTargetPlanetString("venus", ageThen);
+    let stringResponse = newInstance.createYrsDifferenceOnTargetPlanetString("venus", ageThen);
     expect(stringResponse).toEqual("21.09 Venus year(s) have passed.");
   });
   test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 13 Earth years have passed, converted to target planet Mars years", () => {
-    let stringResponse = newInstance.createYrsPassedOnTargetPlanetString("mars", ageThen);
+    let stringResponse = newInstance.createYrsDifferenceOnTargetPlanetString("mars", ageThen);
     expect(stringResponse).toEqual("6.91 Mars year(s) have passed.");
   });
   test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 13 Earth years have passed, converted to target planet Jupiter years", () => {
-    let stringResponse = newInstance.createYrsPassedOnTargetPlanetString("jupiter", ageThen);
+    let stringResponse = newInstance.createYrsDifferenceOnTargetPlanetString("jupiter", ageThen);
     expect(stringResponse).toEqual("1.1 Jupiter year(s) have passed.");
   });
 });
 
-describe("GalacticAge Method - createYrsYetToPassOnTargetPlanetString", () => {
+describe("GalacticAge Method - createYrsDifferenceOnTargetPlanetString", () => {
   let usersEarthAge;
   let newInstance;
   let ageInFuture;
@@ -209,19 +209,19 @@ describe("GalacticAge Method - createYrsYetToPassOnTargetPlanetString", () => {
   });
 
   test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 5 years have yet to pass, converted to target planet Mercury years", () => {
-    let stringResponse = newInstance.createYrsYetToPassOnTargetPlanetString("mercury", ageInFuture);
+    let stringResponse = newInstance.createYrsDifferenceOnTargetPlanetString("mercury", ageInFuture);
     expect(stringResponse).toEqual("20.74 Mercury year(s) have yet to pass.");
   });
   test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 5 years have yet to pass, converted to target planet Venus years", () => {
-    let stringResponse = newInstance.createYrsYetToPassOnTargetPlanetString("venus", ageInFuture);
+    let stringResponse = newInstance.createYrsDifferenceOnTargetPlanetString("venus", ageInFuture);
     expect(stringResponse).toEqual("8.11 Venus year(s) have yet to pass.");
   });
   test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 5 years have yet to pass, converted to target planet Mars years", () => {
-    let stringResponse = newInstance.createYrsYetToPassOnTargetPlanetString("mars", ageInFuture);
+    let stringResponse = newInstance.createYrsDifferenceOnTargetPlanetString("mars", ageInFuture);
     expect(stringResponse).toEqual("2.66 Mars year(s) have yet to pass.");
   });
   test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 5 years have yet to pass, converted to target planet Jupiter years", () => {
-    let stringResponse = newInstance.createYrsYetToPassOnTargetPlanetString("jupiter", ageInFuture);
+    let stringResponse = newInstance.createYrsDifferenceOnTargetPlanetString("jupiter", ageInFuture);
     expect(stringResponse).toEqual("0.42 Jupiter year(s) have yet to pass.");
   });
 });

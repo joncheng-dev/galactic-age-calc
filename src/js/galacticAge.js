@@ -80,17 +80,16 @@ export default class GalacticAge {
     }
   }
 
-  createYrsPassedOnTargetPlanetString(targetPlanet, numYrsIntoPast) {
+  createYrsDifferenceOnTargetPlanetString(targetPlanet, numYrsIntoPastOrFuture) {
     let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
-    let yearsPassedResults = this.convertYrsDifferenceToTargetPlanetYrs(targetPlanetStringFormatChecked, numYrsIntoPast);
+    let yearsDifferenceResults = this.convertYrsDifferenceToTargetPlanetYrs(targetPlanetStringFormatChecked, numYrsIntoPastOrFuture);
 
-    return `${yearsPassedResults} ${targetPlanetStringFormatChecked} year(s) have passed.`;
-  }
-
-  createYrsYetToPassOnTargetPlanetString(targetPlanet, numYrsIntoFuture) {
-    let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
-    let yearsUntilResults = this.convertYrsDifferenceToTargetPlanetYrs(targetPlanetStringFormatChecked, numYrsIntoFuture);
-
-    return `${yearsUntilResults} ${targetPlanetStringFormatChecked} year(s) have yet to pass.`;
+    if (this.earthYears > numYrsIntoPastOrFuture) {
+      return `${yearsDifferenceResults} ${targetPlanetStringFormatChecked} year(s) have passed.`;
+    } else if (this.earthYears < numYrsIntoPastOrFuture) {
+      return `${yearsDifferenceResults} ${targetPlanetStringFormatChecked} year(s) have yet to pass.`;
+    } else {
+      return undefined;
+    }
   }
 }

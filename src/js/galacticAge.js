@@ -16,7 +16,9 @@ export default class GalacticAge {
     const eDaysInAYearMars = 687;
     const eDaysInAYearJupiter = 4333;
 
-    switch (targetPlanet) {
+    let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
+
+    switch (targetPlanetStringFormatChecked) {
       case "Mercury":
         this.mercuryYears = Number(parseFloat((eDaysInAYearMercury / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
@@ -41,27 +43,31 @@ export default class GalacticAge {
     const eDaysInAYearMars = 687;
     const eDaysInAYearJupiter = 4333;
 
+    let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
     let ageDifference = earthYearsDifference(this.earthYears, numYrsIntoPastOrFuture);
-
-    switch (targetPlanet) {
-      case "mercury":
-        return Number(parseFloat(ageDifference / (eDaysInAYearMercury / eDaysInAYearEarth)).toFixed(2));
-      case "earth":
-        return Number(parseFloat(ageDifference / (eDaysInAYearEarth / eDaysInAYearEarth)).toFixed(2));
-      case "venus":
-        return Number(parseFloat(ageDifference / (eDaysInAYearVenus / eDaysInAYearEarth)).toFixed(2));
-      case "mars":
-        return Number(parseFloat(ageDifference / (eDaysInAYearMars / eDaysInAYearEarth)).toFixed(2));
-      case "jupiter":
-        return Number(parseFloat(ageDifference / (eDaysInAYearJupiter / eDaysInAYearEarth)).toFixed(2));
-      default:
-        break;
+    if (ageDifference === null) {
+      return undefined;
+    } else {
+      switch (targetPlanetStringFormatChecked) {
+        case "Mercury":
+          return Number(parseFloat(ageDifference / (eDaysInAYearMercury / eDaysInAYearEarth)).toFixed(2));
+        case "Earth":
+          return Number(parseFloat(ageDifference / (eDaysInAYearEarth / eDaysInAYearEarth)).toFixed(2));
+        case "Venus":
+          return Number(parseFloat(ageDifference / (eDaysInAYearVenus / eDaysInAYearEarth)).toFixed(2));
+        case "Mars":
+          return Number(parseFloat(ageDifference / (eDaysInAYearMars / eDaysInAYearEarth)).toFixed(2));
+        case "Jupiter":
+          return Number(parseFloat(ageDifference / (eDaysInAYearJupiter / eDaysInAYearEarth)).toFixed(2));
+        default:
+          break;
+      }
     }
   }
 
   createConvertedPlanetYrsString(targetPlanet) {
+    this.convertEarthYrsToPlanetYrs(targetPlanet);
     let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
-    this.convertEarthYrsToPlanetYrs(targetPlanetStringFormatChecked);
 
     switch (targetPlanetStringFormatChecked) {
       case "Mercury":
@@ -77,5 +83,15 @@ export default class GalacticAge {
     }
   }
 
-  createYrsPassedOnTargetPlanetString(targetPlanet, numYrsIntoPast) {}
+  createYrsPassedOnTargetPlanetString(targetPlanet, numYrsIntoPast) {
+    let yearsPassedResults = this.convertYrsDifferenceToTargetPlanetYrs(targetPlanet, numYrsIntoPast);
+    let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
+
+    switch (targetPlanetStringFormatChecked) {
+      case "Mercury":
+        return `${yearsPassedResults} ${targetPlanetStringFormatChecked} year(s) have passed.`;
+      default:
+        break;
+    }
+  }
 }

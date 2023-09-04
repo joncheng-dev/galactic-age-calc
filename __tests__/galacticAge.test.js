@@ -23,22 +23,22 @@ describe("GalacticAge Methods to Calculate Different Planets' Years Relative to 
 
   // method for calc different planet years
   test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer set to 2 decimal places", () => {
-    newInstance.convertEarthYrsToPlanetYrs("Mercury");
+    newInstance.convertEarthYrsToPlanetYrs("mercury");
     expect(newInstance.mercuryYears).toEqual(0.24);
   });
   test("should take the 'this.earthYears' value and use it to calculate venus years, updating this.venusYears with its answer set to 2 decimal places", () => {
-    newInstance.convertEarthYrsToPlanetYrs("Venus");
+    newInstance.convertEarthYrsToPlanetYrs("venus");
     expect(newInstance.venusYears).toEqual(0.62);
   });
   test("should take the 'this.earthYears' value and use it to calculate mars years, updating this.marsYears with its answer set to 2 decimal places", () => {
-    newInstance.convertEarthYrsToPlanetYrs("Mars");
+    newInstance.convertEarthYrsToPlanetYrs("mars");
     expect(newInstance.marsYears).toEqual(1.88);
   });
   test("should take the 'this.earthYears' value and use it to calculate jupiter years, updating this.jupiterYears with its answer set to 2 decimal places", () => {
-    newInstance.convertEarthYrsToPlanetYrs("Jupiter");
+    newInstance.convertEarthYrsToPlanetYrs("jupiter");
     expect(newInstance.jupiterYears).toEqual(11.87);
   });
-  test("should take any argument not one of the strings - 'Mercury', 'Venus', 'Mars', 'Jupiter' -- and be undefined", () => {
+  test("should take any argument not one of the strings - 'mercury', 'venus', 'mars', 'jupiter' -- and be undefined", () => {
     newInstance.convertEarthYrsToPlanetYrs(0);
     expect(newInstance.convertEarthYrsToPlanetYrs(0)).toBeUndefined();
   });
@@ -78,7 +78,7 @@ describe("GalacticAge Methods to Calculate Years Passed on Different Planets Rel
   });
   test("should take in two parameters -- 'target planet' (in this case, Mercury), and an invalid number for 'how many years passed since a past birthday' and be undefined.", () => {
     ageThen = -3;
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Mercury", ageThen);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("mercury", ageThen);
     expect(conversion).toBeUndefined();
   });
   test("should take in two parameters -- 'target planet' (in this case, Earth), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Earth years that have passed", () => {

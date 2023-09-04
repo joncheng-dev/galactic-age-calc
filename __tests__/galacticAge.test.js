@@ -168,7 +168,7 @@ describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
   });
 });
 
-describe("GalacticAge Method - createYrsDifferenceOnTargetPlanetString", () => {
+describe("GalacticAge Method - createYrsDifferenceOnTargetPlanetString -- how many years past", () => {
   let usersEarthAge;
   let newInstance;
   let ageThen;
@@ -197,7 +197,7 @@ describe("GalacticAge Method - createYrsDifferenceOnTargetPlanetString", () => {
   });
 });
 
-describe("GalacticAge Method - createYrsDifferenceOnTargetPlanetString", () => {
+describe("GalacticAge Method - createYrsDifferenceOnTargetPlanetString -- how many years yet to pass", () => {
   let usersEarthAge;
   let newInstance;
   let ageInFuture;
@@ -223,5 +223,10 @@ describe("GalacticAge Method - createYrsDifferenceOnTargetPlanetString", () => {
   test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 5 years have yet to pass, converted to target planet Jupiter years", () => {
     let stringResponse = newInstance.createYrsDifferenceOnTargetPlanetString("jupiter", ageInFuture);
     expect(stringResponse).toEqual("0.42 Jupiter year(s) have yet to pass.");
+  });
+  test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- if user enters zero difference from present", () => {
+    ageInFuture = 56;
+    let stringResponse = newInstance.createYrsDifferenceOnTargetPlanetString("jupiter", ageInFuture);
+    expect(stringResponse).toEqual(undefined);
   });
 });

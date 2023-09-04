@@ -90,5 +90,10 @@ export default class GalacticAge {
     return `${yearsPassedResults} ${targetPlanetStringFormatChecked} year(s) have passed.`;
   }
 
-  createYrsYetToPassOnTargetPlanetString(targetPlanet, numYrsIntoFuture) {}
+  createYrsYetToPassOnTargetPlanetString(targetPlanet, numYrsIntoFuture) {
+    let yearsUntilResults = this.convertYrsDifferenceToTargetPlanetYrs(targetPlanet, numYrsIntoFuture);
+    let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
+
+    return `${yearsUntilResults} ${targetPlanetStringFormatChecked} year(s) have yet to pass.`;
+  }
 }

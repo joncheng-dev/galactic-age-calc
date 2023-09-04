@@ -17,6 +17,4 @@ export function confirmAlphaCharOnly(string) {
   return /^[a-zA-Z]+$/.test(string);
 }
 
-// export function fixFormatPlanetName(string) {
-//   let upperCamelCaseName = string.toLowerCase();
-// }
+export function firstCharUpperCase(checkString) {}

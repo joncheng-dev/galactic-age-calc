@@ -65,3 +65,11 @@ describe("confirmAlphaCharOnly utility function", () => {
     expect(result).toEqual(false);
   });
 });
+
+describe("firstCharUpperCase utility function", () => {
+  test("should take in a string and return it with the first character uppercased", () => {
+    let sampleString = "intergalactic";
+    let result = firstCharUpperCase(sampleString);
+    expect(result).toEqual("Intergalactic");
+  });
+});

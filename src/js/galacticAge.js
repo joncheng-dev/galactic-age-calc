@@ -16,9 +16,7 @@ export default class GalacticAge {
     const eDaysInAYearMars = 687;
     const eDaysInAYearJupiter = 4333;
 
-    let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
-
-    switch (targetPlanetStringFormatChecked) {
+    switch (targetPlanet) {
       case "Mercury":
         this.mercuryYears = Number(parseFloat((eDaysInAYearMercury / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
@@ -43,12 +41,11 @@ export default class GalacticAge {
     const eDaysInAYearMars = 687;
     const eDaysInAYearJupiter = 4333;
 
-    let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
     let ageDifference = earthYearsDifference(this.earthYears, numYrsIntoPastOrFuture);
     if (ageDifference === null) {
       return undefined;
     } else {
-      switch (targetPlanetStringFormatChecked) {
+      switch (targetPlanet) {
         case "Mercury":
           return Number(parseFloat(ageDifference / (eDaysInAYearMercury / eDaysInAYearEarth)).toFixed(2));
         case "Earth":
@@ -84,15 +81,15 @@ export default class GalacticAge {
   }
 
   createYrsPassedOnTargetPlanetString(targetPlanet, numYrsIntoPast) {
-    let yearsPassedResults = this.convertYrsDifferenceToTargetPlanetYrs(targetPlanet, numYrsIntoPast);
     let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
+    let yearsPassedResults = this.convertYrsDifferenceToTargetPlanetYrs(targetPlanetStringFormatChecked, numYrsIntoPast);
 
     return `${yearsPassedResults} ${targetPlanetStringFormatChecked} year(s) have passed.`;
   }
 
   createYrsYetToPassOnTargetPlanetString(targetPlanet, numYrsIntoFuture) {
-    let yearsUntilResults = this.convertYrsDifferenceToTargetPlanetYrs(targetPlanet, numYrsIntoFuture);
     let targetPlanetStringFormatChecked = firstCharUpperCase(targetPlanet);
+    let yearsUntilResults = this.convertYrsDifferenceToTargetPlanetYrs(targetPlanetStringFormatChecked, numYrsIntoFuture);
 
     return `${yearsUntilResults} ${targetPlanetStringFormatChecked} year(s) have yet to pass.`;
   }

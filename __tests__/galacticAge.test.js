@@ -23,22 +23,22 @@ describe("GalacticAge Methods to Calculate Different Planets' Years Relative to 
 
   // method for calc different planet years
   test("should take the 'this.earthYears' value and use it to calculate mercury years, updating this.mercuryYears with its answer set to 2 decimal places", () => {
-    newInstance.convertEarthYrsToPlanetYrs("mercury");
+    newInstance.convertEarthYrsToPlanetYrs("Mercury");
     expect(newInstance.mercuryYears).toEqual(0.24);
   });
   test("should take the 'this.earthYears' value and use it to calculate venus years, updating this.venusYears with its answer set to 2 decimal places", () => {
-    newInstance.convertEarthYrsToPlanetYrs("venus");
+    newInstance.convertEarthYrsToPlanetYrs("Venus");
     expect(newInstance.venusYears).toEqual(0.62);
   });
   test("should take the 'this.earthYears' value and use it to calculate mars years, updating this.marsYears with its answer set to 2 decimal places", () => {
-    newInstance.convertEarthYrsToPlanetYrs("mars");
+    newInstance.convertEarthYrsToPlanetYrs("Mars");
     expect(newInstance.marsYears).toEqual(1.88);
   });
   test("should take the 'this.earthYears' value and use it to calculate jupiter years, updating this.jupiterYears with its answer set to 2 decimal places", () => {
-    newInstance.convertEarthYrsToPlanetYrs("jupiter");
+    newInstance.convertEarthYrsToPlanetYrs("Jupiter");
     expect(newInstance.jupiterYears).toEqual(11.87);
   });
-  test("should take any argument not one of the strings - 'mercury', 'venus', 'mars', 'jupiter' -- and be undefined", () => {
+  test("should take any argument not one of the strings - 'Mercury', 'Venus', 'Mars', 'Jupiter' -- and be undefined", () => {
     newInstance.convertEarthYrsToPlanetYrs(0);
     expect(newInstance.convertEarthYrsToPlanetYrs(0)).toBeUndefined();
   });
@@ -57,19 +57,19 @@ describe("GalacticAge Methods to Calculate Years Passed on Different Planets Rel
 
   // method convertYrsDifferenceToTargetPlanetYrs -- use a past year, calculate number of years to present
   test("should take in two parameters -- 'target planet' (in this case, Mercury), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Mercury years that have passed", () => {
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("mercury", ageThen);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Mercury", ageThen);
     expect(conversion).toEqual(53.92);
   });
   test("should take in two parameters -- 'target planet' (in this case, Venus), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Venus years that have passed", () => {
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("venus", ageThen);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Venus", ageThen);
     expect(conversion).toEqual(21.09);
   });
   test("should take in two parameters -- 'target planet' (in this case, Mars), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Mars years that have passed", () => {
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("mars", ageThen);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Mars", ageThen);
     expect(conversion).toEqual(6.91);
   });
   test("should take in two parameters -- 'target planet' (in this case, Jupiter), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Jupiter years that have passed", () => {
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("jupiter", ageThen);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Jupiter", ageThen);
     expect(conversion).toEqual(1.1);
   });
   test("should take in two parameters -- 'target planet' (in this case, a non-accepted value), and 'how many years passed since a past birthday' and be undefined.", () => {
@@ -78,11 +78,11 @@ describe("GalacticAge Methods to Calculate Years Passed on Different Planets Rel
   });
   test("should take in two parameters -- 'target planet' (in this case, Mercury), and an invalid number for 'how many years passed since a past birthday' and be undefined.", () => {
     ageThen = -3;
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("mercury", ageThen);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Mercury", ageThen);
     expect(conversion).toBeUndefined();
   });
   test("should take in two parameters -- 'target planet' (in this case, Earth), and 'how many years passed since a past birthday'. Method uses the user's current Earth age property to calculate and return the number of Earth years that have passed", () => {
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("earth", ageThen);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Earth", ageThen);
     expect(conversion).toEqual(13);
   });
 });
@@ -100,23 +100,23 @@ describe("GalacticAge Method to Calculate Earth Years Until a Future Date on Con
 
   // method convertYrsDifferenceToTargetPlanetYrs -- use a future year, how many years until target date
   test("should take in two parameters -- 'target planet' (in this case, Mercury), and 'how many years until a future date'. Method uses the user's current Earth age property to calculate and return the number of Mercury years that will need to elapse", () => {
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("mercury", ageInFuture);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Mercury", ageInFuture);
     expect(conversion).toEqual(20.74);
   });
   test("should take in two parameters -- 'target planet' (in this case, Venus), and 'how many years until a future date'. Method uses the user's current Earth age property to calculate and return the number of Venus years that will need to elapse", () => {
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("venus", ageInFuture);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Venus", ageInFuture);
     expect(conversion).toEqual(8.11);
   });
   test("should take in two parameters -- 'target planet' (in this case, Mars), and 'how many years until a future date'. Method uses the user's current Earth age property to calculate and return the number of Mars years that will need to elapse", () => {
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("mars", ageInFuture);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Mars", ageInFuture);
     expect(conversion).toEqual(2.66);
   });
   test("should take in two parameters -- 'target planet' (in this case, Jupiter), and 'how many years until a future date'. Method uses the user's current Earth age property to calculate and return the number of Jupiter years that will need to elapse", () => {
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("jupiter", ageInFuture);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Jupiter", ageInFuture);
     expect(conversion).toEqual(0.42);
   });
   test("should take in two parameters -- 'target planet' (in this case, Earth), and 'how many years until a future date'. Method uses the user's current Earth age property to calculate and return the number of Earth years that will need to elapse", () => {
-    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("earth", ageInFuture);
+    let conversion = newInstance.convertYrsDifferenceToTargetPlanetYrs("Earth", ageInFuture);
     expect(conversion).toEqual(5);
   });
 });
@@ -131,7 +131,7 @@ describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
   });
 
   test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and target planet Mercury.", () => {
-    let planetOfInterest = "mercury";
+    let planetOfInterest = "Mercury";
     let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
     expect(stringResponse).toEqual("You are 1 year(s) old on Earth, and 0.24 years old on Mercury.");
   });
@@ -146,23 +146,23 @@ describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
     expect(stringResponse).toEqual(undefined);
   });
   test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and target planet Venus.", () => {
-    let planetOfInterest = "venus";
+    let planetOfInterest = "Venus";
     let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
     expect(stringResponse).toEqual("You are 1 year(s) old on Earth, and 0.62 years old on Venus.");
   });
   test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and target planet Mars.", () => {
-    let planetOfInterest = "mars";
+    let planetOfInterest = "Mars";
     let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
     expect(stringResponse).toEqual("You are 1 year(s) old on Earth, and 1.88 years old on Mars.");
   });
   test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and target planet Jupiter.", () => {
-    let planetOfInterest = "jupiter";
+    let planetOfInterest = "Jupiter";
     let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
     expect(stringResponse).toEqual("You are 1 year(s) old on Earth, and 11.87 years old on Jupiter.");
   });
   test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and target planet Mercury.", () => {
     newInstance.earthYears = 2;
-    let planetOfInterest = "mercury";
+    let planetOfInterest = "Mercury";
     let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
     expect(stringResponse).toEqual("You are 2 year(s) old on Earth, and 0.48 years old on Mercury.");
   });

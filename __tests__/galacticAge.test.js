@@ -27,7 +27,7 @@ describe("GalacticAge Methods to Calculate Different Planets' Years Relative to 
     expect(newInstance.mercuryYears).toEqual(0.24);
   });
   test("should take the 'this.earthYears' value and use it to calculate venus years, updating this.venusYears with its answer set to 2 decimal places", () => {
-    newInstance.convertEarthYrsToPlanetYrs("venus");
+    newInstance.convertEarthYrsToPlanetYrs("Venus");
     expect(newInstance.venusYears).toEqual(0.62);
   });
   test("should take the 'this.earthYears' value and use it to calculate mars years, updating this.marsYears with its answer set to 2 decimal places", () => {

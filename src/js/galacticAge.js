@@ -20,7 +20,7 @@ export default class GalacticAge {
       case "Mercury":
         this.mercuryYears = Number(parseFloat((eDaysInAYearMercury / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
-      case "venus":
+      case "Venus":
         this.venusYears = Number(parseFloat((eDaysInAYearVenus / eDaysInAYearEarth) * this.earthYears).toFixed(2));
         break;
       case "mars":
@@ -66,6 +66,8 @@ export default class GalacticAge {
     switch (targetPlanetStringFormatChecked) {
       case "Mercury":
         return `You are ${this.earthYears} year(s) old on Earth, and ${this.mercuryYears} years old on ${targetPlanetStringFormatChecked}.`;
+      case "Venus":
+        return `You are ${this.earthYears} year(s) old on Earth, and ${this.venusYears} years old on ${targetPlanetStringFormatChecked}.`;
       default:
         break;
     }

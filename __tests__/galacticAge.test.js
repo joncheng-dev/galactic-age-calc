@@ -35,10 +35,10 @@ describe("GalacticAge Methods to Calculate Different Planets' Years Relative to 
     expect(newInstance.marsYears).toEqual(1.88);
   });
   test("should take the 'this.earthYears' value and use it to calculate jupiter years, updating this.jupiterYears with its answer set to 2 decimal places", () => {
-    newInstance.convertEarthYrsToPlanetYrs("jupiter");
+    newInstance.convertEarthYrsToPlanetYrs("Jupiter");
     expect(newInstance.jupiterYears).toEqual(11.87);
   });
-  test("should take any argument not one of the strings - 'mercury', 'venus', 'mars', 'jupiter' -- and be undefined", () => {
+  test("should take any argument not one of the strings - 'Mercury', 'Venus', 'Mars', 'Jupiter' -- and be undefined", () => {
     newInstance.convertEarthYrsToPlanetYrs(0);
     expect(newInstance.convertEarthYrsToPlanetYrs(0)).toBeUndefined();
   });
@@ -154,5 +154,10 @@ describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
     let planetOfInterest = "mars";
     let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
     expect(stringResponse).toEqual("You are 1 year(s) old on Earth, and 1.88 years old on Mars.");
+  });
+  test("should use the result of calling the convertEarthYrsToPlanetYrs method and return a string response  -- for usersEarthAge 1, and target planet Jupiter.", () => {
+    let planetOfInterest = "jupiter";
+    let stringResponse = newInstance.createConvertedPlanetYrsString(planetOfInterest);
+    expect(stringResponse).toEqual("You are 1 year(s) old on Earth, and 11.87 years old on Jupiter.");
   });
 });

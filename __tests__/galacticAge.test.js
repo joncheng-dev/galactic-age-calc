@@ -167,3 +167,20 @@ describe("GalacticAge Method - createConvertedPlanetYrsString", () => {
     expect(stringResponse).toEqual("You are 2 year(s) old on Earth, and 0.48 years old on Mercury.");
   });
 });
+
+describe("GalacticAge Method - createYrsPassedOnTargetPlanetString", () => {
+  let usersEarthAge;
+  let newInstance;
+  let ageThen;
+
+  beforeEach(() => {
+    usersEarthAge = 56;
+    newInstance = new GalacticAge(usersEarthAge);
+    ageThen = 43;
+  });
+
+  test("should use the result of calling the convertYrsDifferenceToTargetPlanetYrs method and return a string response -- for 13 Earth years have passed, converted to target planet Mercury years", () => {
+    let stringResponse = newInstance.createYrsPassedOnTargetPlanetString("mercury", ageThen);
+    expect(stringResponse).toEqual("53.92 Mercury year(s) have passed.");
+  });
+});

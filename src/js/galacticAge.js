@@ -76,4 +76,6 @@ export default class GalacticAge {
         break;
     }
   }
+
+  createYrsPassedOnTargetPlanetString(targetPlanet, numYrsIntoPast) {}
 }
